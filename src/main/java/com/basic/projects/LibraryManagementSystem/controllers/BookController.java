@@ -22,9 +22,17 @@ public class BookController {
         model.addAttribute("Books",new Book());
         return "book-form";
     }
+    @GetMapping("/{id}/updateBook")
     public String updateForm(Model model,@PathVariable long id){
         Book book=bookService.getBookById(id);
-        model.addAttribute("Books",);
+        model.addAttribute("book",book);
+        return "book-update-form";
+    }
+    @PostMapping("/{id}/update")
+    public String updateBook(@PathVariable long id,@RequestParam String title,@RequestParam String author,@RequestParam String genre,@RequestParam boolean avail_status){
+
+        bookService.updateNewBook(id,title,author,genre,avail_status);
+        return "redirect:/";
     }
 
     @PostMapping("/addBook")

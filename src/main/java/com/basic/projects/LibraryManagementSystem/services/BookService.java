@@ -33,4 +33,13 @@ public class BookService {
     public Book getBookById(long id) {
         return bookRepository.findById(id).orElse(null);
     }
+
+    public void updateNewBook(long id, String title, String author, String genre, boolean availStatus) {
+        Book book =bookRepository.findById(id).orElse(null);
+        book.setTitle(title);
+        book.setAuthor(author);
+        book.setGenre(genre);
+        book.setAvail_status(availStatus);
+        bookRepository.save(book);
+    }
 }

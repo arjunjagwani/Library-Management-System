@@ -23,14 +23,24 @@
             <label for="genre" >Genre: </label>
             <input type="text" name="genre" id="genre" required>
 
-            <input type="hidden" name="avail_status" value="false">
-            <input type="checkbox" name="avail_status" id="avail_status" value="true" >
+            <label for="avail_status_checkbox"> Book Availability:
+                <input type="hidden" name="avail_status" id="avail_status_hidden" value="false">
+                <input type="checkbox" name="avail_status_checkbox" id="avail_status_checkbox" value="true">
+            </label>
 
             <button type="submit">Add Student</button>
         </form>
     </div>
 
 </div>
-
+<script>
+    document.getElementById('avail_status_checkbox').addEventListener('change', function() {
+  if (this.checked) {
+    document.getElementById('avail_status_hidden').value = 'true';
+  } else {
+    document.getElementById('avail_status_hidden').value = 'false';
+  }
+});
+</script>
 </body>
 </html>
