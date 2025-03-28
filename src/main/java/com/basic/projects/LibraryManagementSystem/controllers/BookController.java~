@@ -16,10 +16,7 @@ public class BookController {
     BookService bookService;
     ApplicationContext applicationContext;
 
-    @GetMapping("/exit")
-    public void exitApplication() {
-        System.exit(0); // Terminates the application
-    }
+    
 
     @GetMapping("/")
     public String getBooks(Model model){
