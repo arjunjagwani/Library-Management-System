@@ -22,36 +22,11 @@ Java, Spring Boot (MVC, REST API)
 
 Database
 
-H2 Database (In-memory DB)
+MySQL Database
 
 Build Tool
 
 Maven
-
-🚀 Installation & Setup
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/arjunjagwani/Library-Management-System.git
-cd Library-Management-System
-
-2️⃣ Build the Project
-
-Use the Maven Wrapper to build the project:
-
-./mvnw clean install   # For macOS/Linux
-mvnw.cmd clean install  # For Windows
-
-3️⃣ Run the Application
-
-./mvnw spring-boot:run   # For macOS/Linux
-mvnw.cmd spring-boot:run  # For Windows
-
-4️⃣ Access the Web App
-
-Open your browser and go to:
-
-http://localhost:8080
 
 🎮 Usage Guide
 
@@ -110,20 +85,3 @@ Library-Management-System/
 │── mvnw, mvnw.cmd                 # Maven Wrapper
 │── README.md                      # Project Documentation
 
-🏗️ Future Enhancements
-
-🔹 User Authentication – Implement login/logout functionality for admin access.🔹 Book Borrowing System – Allow users to borrow and return books.🔹 PDF Reports – Generate reports of books in the system.
-
-👥 Contributing
-
-💡 Want to improve this project?
-
-Fork this repository
-
-Create a feature branch
-
-Commit your changes
-
-Submit a pull request
-
-We welcome contributions! 🚀
